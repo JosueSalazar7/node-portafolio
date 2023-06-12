@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path');
 const {engine} = require('express-handlebars')
+const methodOverride = require('method-override');
 // Inicializaciones
 const app = express()
 
@@ -18,19 +19,17 @@ app.engine('.hbs',engine({
 app.set('view engine','.hbs')
 // Middlewares 
 app.use(express.urlencoded({extended:false}))
+app.use(methodOverride('_method'))
 
+//Variables globales
 
-// Variables globales
-
-// Rutas 
-// Rutas 
+//Rutas 
 app.use(require('./routers/index.routes'))
-app.get('/',(req,res)=>{
-    res.render('index')
-})
 
-// Archivos estáticos
+//Archivos estáticos
 app.use(express.static(path.join(__dirname,'public')))
 
+// Rutas 
+app.use(require('./routers/portafolio.routes'))
 
 module.exports = app
