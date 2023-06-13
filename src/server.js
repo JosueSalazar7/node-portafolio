@@ -34,7 +34,10 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 //Variables globales
-
+app.use((req,res,next)=>{
+    res.locals.user = req.user?.name || null
+    next()
+})
 //Rutas 
 app.use(require('./routers/index.routes'))
 app.use(require('./routers/user.routes'))
