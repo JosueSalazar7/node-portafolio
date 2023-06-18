@@ -33,9 +33,17 @@
                                 <textarea class="form-control" id="description" type="text" placeholder="Enter your message here..." style="height: 10rem" required name="description"></textarea>
                                 <label for="description">Description</label>
                             </div>
+                            <!-- Habilidaddes♠-->
+                             <div class="form-floating mb-3">
+                                <textarea class="form-control" id="skill" type="text" placeholder="Enter your message here..." style="height: 10rem" required name="skill"></textarea>
+                                <label for="skill">skill</label>
+                            </div>
+                             <!-- Número de contacto input --> 
+                             <div class="form-floating mb-3"> <input class="form-control" id="contact" type="text" placeholder="Enter your contact number..." required name="contact" pattern="[0-9]+" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter a valid contact number (only numbers).')" /> 
+                             <label for="contact">Contact Number</label> </div>
 
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl" type="submit" >Send</button>
 
                         </form>
 
@@ -43,3 +51,4 @@
                 </div>
             </div>
         </section>
+        <script>

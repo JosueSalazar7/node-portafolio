@@ -13,8 +13,8 @@ const renderPortafolioForm = (req,res)=>{
 //Capturar los daots y presentar en consola
 const Portfolio = require('../models/Portfolio')//Importación del modelo
 const createNewPortafolio =async (req,res)=>{
-    const {title, category,description} = req.body
-    const newPortfolio = new Portfolio({title,category,description})
+    const {title, category,description,skill,contact} = req.body
+    const newPortfolio = new Portfolio({title,category,description,skill,contact})
     await newPortfolio.save()
     res.redirect('/portafolios')
 }

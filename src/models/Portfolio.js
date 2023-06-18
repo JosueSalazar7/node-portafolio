@@ -13,6 +13,14 @@ const portfolioSchema = new Schema({
     category :{
         type:String,
         require:true
+    },
+    skill :{
+        type:String,
+        require:true
+    },
+    contact: {
+        type:String,
+        required: true,
     }
 },{
     timestamps:true
