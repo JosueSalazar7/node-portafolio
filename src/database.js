@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGODB_URI = process.env.DB_CONNECTION;
+const MONGODB_URI = `mongodb://0.0.0.0:27017/portafolio`
 
 connection = async () => {
   try {
