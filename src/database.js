@@ -1,16 +1,15 @@
-const mongosoe = require('mongoose')
-const {DBUSER, DBPASSWORD, DBNAME} = process.env
-const MONGODB_URL = `mongodb+srv://${DBUSER}:${DBPASSWORD}@cluster0.gyfwtbm.mongodb.net/${DBNAME}`
+const mongoose = require('mongoose')
+const MONGODB_URI = `mongodb+srv://admin:admin@cluster0.h2rvxez.mongodb.net/?retryWrites=true&w=majority`
+
 connection = async()=>{
-    try{
-        await mongosoe.connect(MONGODB_URL,{
+    try {
+         await mongoose.connect(MONGODB_URI,{
             useUnifiedTopology:true,
             useNewUrlParser:true
         })
-        console.log("Base de datos conectada")
-    }
-    catch(error){
-        console.log(error)
+        console.log("Database is connected")
+    } catch (error) {
+        console.log(error);
     }
 }
 
