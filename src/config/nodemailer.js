@@ -23,7 +23,7 @@ module.exports.sendMailToUser = async(userMail,token)=>{
     //Asunto
     subject: "Verifica tu cuenta de correo electrónico",
     //Cuerpo del mail
-    html: `<a href="https://node-portafolio-production-0681.up.railway.app//user/confirmar/${token}">Clic para confirmar tu cuenta</a>`,
+    html: `<a href="https://node-portafolio-production-0681.up.railway.app/user/confirmar/${token}">Clic para confirmar tu cuenta</a>`,
     });
     //verificar en consola
     console.log("Message sent: %s", info.messageId);
